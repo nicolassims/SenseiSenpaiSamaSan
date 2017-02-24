@@ -36,9 +36,9 @@ function setLName() {
 }
 
 function setBirthyear() {
-    const ONEHUNDREDANDTWENTYYEAROLDSPROBABLYARENTGOINGTOBEUSINGTHIS = 1900;
+    const MINYEAR = 1900;
     birthYear[userNumber] = PROMPT.question('\n<<What is your birth year?>>\n>');
-    while (birthYear[userNumber] == '' || birthYear[userNumber] < ONEHUNDREDANDTWENTYYEAROLDSPROBABLYARENTGOINGTOBEUSINGTHIS || birthYear[userNumber] > new Date().getFullYear() || isNaN(birthYear[userNumber]) == true) {
+    while (birthYear[userNumber] == '' || birthYear[userNumber] < MINYEAR || birthYear[userNumber] > new Date().getFullYear() || isNaN(birthYear[userNumber]) == true) {
         birthYear[userNumber] = PROMPT.question('\nAnswer truthfully.\n' +
             '<<What is your birth year?>>\n>');
     }
